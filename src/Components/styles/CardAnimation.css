@@ -1,0 +1,7 @@
+.tilt-wrapper {
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+.tilt-wrapper:hover {
+  cursor: pointer;
+}

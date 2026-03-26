@@ -1,0 +1,124 @@
+/* src/Components/FoodMenuCss.css */
+
+/* ====== Container ====== */
+.foodmenu-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* ====== Title ====== */
+.foodmenu-title {
+  font-size: 1.8rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* ====== Grid ====== */
+.foodmenu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* ====== Each Menu Item ====== */
+.foodmenu-item {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transform-origin: center;
+}
+
+/* ✨ Hover = gentle lift + scale + glow */
+.foodmenu-item:hover {
+  transform: translateY(-6px) scale(1.12);
+}
+
+/* ====== Circle Image Wrapper ====== */
+.foodmenu-img-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto 10px;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+/* ✨ Hover glow effect */
+.foodmenu-item:hover .foodmenu-img-wrap {
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+  transform: scale(1.05);
+}
+
+/* ====== Image Inside Circle ====== */
+.foodmenu-img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom of image on hover */
+.foodmenu-item:hover .foodmenu-img {
+  transform: scale(1.12);
+}
+
+/* ====== Category Name ====== */
+.foodmenu-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 6px;
+  transition: color 0.3s ease;
+}
+
+/* On hover, text turns theme blue */
+.foodmenu-item:hover .foodmenu-name {
+  color: #4f46e5;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .foodmenu-title {
+    font-size: 1.5rem;
+  }
+
+  .foodmenu-grid {
+    gap: 20px;
+  }
+
+  .foodmenu-img-wrap {
+    width: 85px;
+    height: 85px;
+  }
+
+  .foodmenu-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .foodmenu-container {
+    margin: 40px auto;
+  }
+
+  .foodmenu-img-wrap {
+    width: 70px;
+    height: 70px;
+  }
+
+  .foodmenu-name {
+    font-size: 0.85rem;
+  }
+}

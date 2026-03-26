@@ -1,0 +1,245 @@
+/* 🌅 FOOTER BASE */
+.footer-section {
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  color: #eee;
+  padding: 80px 8% 40px;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ✨ Soft Glowing Overlay */
+.footer-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(255, 128, 0, 0.1), transparent 70%);
+  animation: moveGlow 10s linear infinite alternate;
+  z-index: 0;
+}
+
+@keyframes moveGlow {
+  0% { transform: translateX(0); opacity: 0.8; }
+  100% { transform: translateX(80px); opacity: 1; }
+}
+
+/* 🧭 CONTAINER */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🍴 BRAND */
+.footer-brand {
+  flex: 1.1;
+  min-width: 270px;
+}
+
+.footer-logo {
+  font-size: 2.2rem;
+  color: #ff9100;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+  color: #ffaa33;
+}
+
+.footer-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* 🔗 QUICK LINKS */
+.footer-links {
+  flex: 0.8;
+  min-width: 220px;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-links h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 35px;
+  height: 3px;
+  background-color: #ff9100;
+  border-radius: 5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+  cursor: pointer;
+  color: #ccc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links li::before {
+  content: "›";
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  color: #ff9100;
+  transition: all 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #ff9100;
+  transform: translateX(6px);
+}
+
+.footer-links li:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+/* 📞 CONTACT INFO */
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-contact h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-contact h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 35px;
+  height: 3px;
+  background-color: #ff9100;
+  border-radius: 5px;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.footer-contact p:hover {
+  color: #ff9100;
+  transform: translateX(4px);
+}
+
+/* 🌅 BOTTOM BAR */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 145, 0, 0.3);
+  font-size: 0.9rem;
+  color: #aaa;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-bottom p {
+  transition: 0.3s ease;
+}
+
+.footer-bottom p:hover {
+  color: #ff9100;
+  letter-spacing: 0.5px;
+}
+
+/* 🌈 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 40px;
+  }
+
+  .footer-logo {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links h3::after,
+  .footer-contact h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-links li::before {
+    display: none;
+  }
+
+  .footer-links li:hover {
+    transform: none;
+    color: #ff9100;
+  }
+
+  .footer-contact p:hover {
+    transform: none;
+    color: #ff9100;
+  }
+
+  .footer-desc {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 60px 6% 30px;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+
+  .footer-links li {
+    font-size: 0.95rem;
+  }
+
+  .footer-contact p {
+    font-size: 0.9rem;
+  }
+}

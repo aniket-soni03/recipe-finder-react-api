@@ -1,0 +1,197 @@
+/* 🌿 FoodSearchCss.css — Modern clean white theme */
+
+/* Wrap */
+.foodsearch-wrap {
+  padding: 2rem 1.25rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
+
+/* Inner container */
+.search-inner {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Heading */
+.search-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2d2d2d;
+  letter-spacing: 0.5px;
+  position: relative;
+  animation: fadeInDown 0.8s ease;
+}
+
+/* Input container */
+.input-wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Search row (input + button) */
+.search-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ✨ Search Input Box */
+#search-input {
+  flex: 1;
+  padding: 0.85rem 1.1rem;
+  border: 2px solid #dcdcdc; /* ✅ Added soft border */
+  border-radius: 50px;
+  outline: none;
+  background: #f9f9f9;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+#search-input:hover {
+  border-color: #bfbfbf; /* light gray hover */
+}
+
+#search-input:focus {
+  background: #fff;
+  border-color: #4f46e5; /* blue border on focus */
+  box-shadow: 0 6px 25px rgba(79, 70, 229, 0.15);
+  transform: scale(1.02);
+}
+
+/* ✨ Search Button */
+#search-btn {
+  padding: 0.8rem 1.4rem;
+  background: linear-gradient(135deg, #4f46e5, #6d5dfc);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.25);
+}
+
+#search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.35);
+  background: linear-gradient(135deg, #5a50f0, #847dfc);
+}
+
+/* 🧠 Suggestions Dropdown */
+.suggestions-list {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 100;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Suggestion item */
+.suggestions-list li {
+  padding: 12px 18px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.suggestions-list li:hover {
+  background: #f4f5ff;
+  color: #4f46e5;
+  transform: translateX(4px);
+}
+
+/* Loading text */
+.loading-text {
+  color: #666;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+/* 🌈 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌍 Responsive Design */
+@media (max-width: 768px) {
+  .search-inner {
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .search-title {
+    font-size: 1.5rem;
+  }
+
+  .search-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  #search-btn {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .suggestions-list {
+    width: 100%;
+    top: auto;
+    margin-top: 8px;
+  }
+}
+
+
+/* ✅ Cards container (wide area for grid) */
+.cards-container {
+  width: 90%;
+  max-width: 1400px;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ensures inner grid in FoodCards uses full width */
+.cards-container .food-cards-grid {
+  width: 100%;
+}

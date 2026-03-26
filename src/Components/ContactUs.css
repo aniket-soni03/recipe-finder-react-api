@@ -1,0 +1,262 @@
+/* 🌟 Contact Section Styling */
+.contact-section {
+  background: linear-gradient(135deg, #fff8f0, #ffe9d6);
+  padding: 90px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 🌟 Title Area */
+.contact-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 60px;
+}
+
+/* ✨ Main Grid Layout */
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: nowrap; /* stays row layout on large screens */
+}
+
+/* 🧩 Left Info Cards Section */
+.contact-info {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* 🌈 Beautiful Info Card */
+.info-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 14px;
+  padding: 18px 25px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 111, 0, 0.15);
+  box-shadow: 0 6px 18px rgba(255, 111, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255, 111, 0, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* 🧡 Icon Style */
+.info-icon {
+  font-size: 2rem;
+  color: #ff6f00;
+  margin-bottom: 10px;
+}
+
+.info-card h4 {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* 📝 Contact Form */
+.contact-form {
+  flex: 1.2;
+  background: #fff;
+  padding: 45px 50px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  transition: all 0.3s ease;
+  min-width: 350px;
+}
+
+.contact-form:hover {
+  transform: translateY(-4px);
+}
+
+/* 🎯 Inputs and Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.6px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff6f00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 111, 0, 0.3);
+}
+
+/* 🚀 Button */
+.contact-btn {
+  background: linear-gradient(135deg, #ff6f00, #ff9b3d);
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-self: flex-start;
+}
+
+.contact-btn:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #e65c00, #ff8c2a);
+  box-shadow: 0 4px 15px rgba(255, 111, 0, 0.3);
+}
+
+/* 💫 RESPONSIVE FIXES */
+
+/* ✅ Tablets (width ≤ 1024px) */
+@media (max-width: 1024px) {
+  .contact-grid {
+    gap: 40px;
+  }
+
+  .contact-section {
+    padding: 70px 6%;
+  }
+
+  .contact-title {
+    font-size: 2.3rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    margin-bottom: 45px;
+  }
+
+  .contact-form {
+    padding: 35px 40px;
+  }
+}
+
+/* ✅ Mobiles (width ≤ 850px) */
+@media (max-width: 850px) {
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .contact-form {
+    order: 2;
+  }
+}
+
+/* ✅ Small Mobiles (width ≤ 500px) */
+@media (max-width: 500px) {
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+  }
+
+  .contact-grid {
+    gap: 30px;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .info-card {
+    padding: 14px 18px;
+  }
+
+  .info-icon {
+    font-size: 1.6rem;
+  }
+
+  .info-card h4 {
+    font-size: 1rem;
+  }
+
+  .info-card p {
+    font-size: 0.85rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ✅ Ultra-small (width ≤ 380px) */
+@media (max-width: 380px) {
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
+    min-width: unset;
+  }
+
+  .info-card {
+    padding: 12px;
+  }
+}

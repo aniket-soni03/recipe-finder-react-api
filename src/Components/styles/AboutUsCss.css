@@ -1,0 +1,150 @@
+/* 🌟 Modern About Us Section */
+.aboutus-section {
+  width: 100%;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container */
+.aboutus-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 90%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* ===== Left (Image) ===== */
+.aboutus-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutus-img {
+  width: 330px;
+  max-width: 100%;
+  animation: floatUpDown 3s ease-in-out infinite;
+  filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.15));
+  transition: transform 0.4s ease;
+}
+
+.aboutus-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Right (Text) ===== */
+.aboutus-right {
+  flex: 1.2;
+  color: #333;
+}
+
+.aboutus-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.aboutus-title span {
+  color: #4f46e5;
+  text-shadow: 0 2px 10px rgba(79, 70, 229, 0.25);
+}
+
+/* Paragraphs */
+.aboutus-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ===== Stats Section ===== */
+.aboutus-stats {
+  display: flex;
+  gap: 25px;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.08);
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.15);
+}
+
+.stat-box h3 {
+  color: #4f46e5;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.stat-box p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* ===== Button ===== */
+.aboutus-btn {
+  background: linear-gradient(135deg, #4f46e5, #6d5dfc);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
+}
+
+.aboutus-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+}
+
+/* ===== Floating Animation ===== */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .aboutus-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .aboutus-right {
+    flex: unset;
+  }
+
+  .aboutus-stats {
+    justify-content: center;
+  }
+
+  .aboutus-img {
+    width: 250px;
+  }
+}
